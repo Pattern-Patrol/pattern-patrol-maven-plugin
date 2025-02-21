@@ -20,10 +20,6 @@
         </repository>
     </distributionManagement>
 
-    <activeProfiles>
-        <activeProfile>github</activeProfile>
-    </activeProfiles>
-
     <profiles>
         <profile>
             <id>github</id>
@@ -42,14 +38,6 @@
             </repositories>
         </profile>
     </profiles>
-
-    <servers>
-        <server>
-            <id>github</id>
-            <username>ajhelsby</username>
-            <password>TOKEN</password>
-        </server>
-    </servers>
 
     <dependencies>
         <!-- Maven Plugin API -->

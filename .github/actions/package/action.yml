@@ -1,9 +1,14 @@
 name: Pacakge
+inputs:
+  token:
+    description: "Github token with package credentials"
+    required: true
+  user:
+    description: "Github user with package credentials"
+    required: true
+
 runs:
-  using: ubuntu-latest
-  strategy:
-    matrix:
-      java: [ '8', '11', '17', '21' ]
+  using: composite
 
   steps:
     - name: Checkout
@@ -13,8 +18,27 @@ runs:
       uses: actions/setup-java@v4
       with:
         distribution: 'corretto'
-        java-version: ${{ matrix.java }}
+        java-version: '17'
         cache: 'maven'
 
-    - name: Build with Maven
-      run: mvn -B install --file pom.xml
+    - name: Configure Maven Settings
+      run: |
+        mkdir -p ~/.m2
+        cat > ~/.m2/settings.xml <<EOL
+        <settings>
+          <activeProfiles>
+            <activeProfile>github<activeProfile>
+          </activeProfiles>
+          <servers>
+            <server>
+              <id>github</id>
+              <username>${{ inputs.user }}</username>
+              <password>${{ inputs.token }}</password>
+            </server>
+          </servers>
+        </settings>
+      shell: bash
+
+    - name: Publish Package
+      run: mvn -B deploy release
+      shell: bash
