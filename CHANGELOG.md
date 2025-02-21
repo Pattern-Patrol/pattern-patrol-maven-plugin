@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.2...v0.0.3) (2025-02-21)
+
+
+### Other
+
+* **main:** release 0.0.3-SNAPSHOT ([3d204e4](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/3d204e4683d8dbf336bb5e67ff702ba485b3b327))
+
 ## [0.0.2](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.1...v0.0.2) (2025-02-21)
 
 
