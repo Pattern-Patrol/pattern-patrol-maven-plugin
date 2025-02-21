@@ -17,11 +17,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Release Please
+        id: release  # Assign an ID to reference outputs
         uses: googleapis/release-please-action@v4
         with:
           command: manifest
           token: ${{ secrets.TOKEN }}
           default-branch: main
+
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
       release_tag_name: ${{ steps.release.outputs.tag_name }}
@@ -29,12 +31,12 @@ jobs:
   lint_and_test:
     needs: release-please
     runs-on: ubuntu-latest
-    if: ${{ needs.release-please.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.release_created == 'true' }}  # Ensure correct boolean check
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run custom lint-and-test action
+      - name: Run lint and test
         uses: ./.github/actions/lint-and-test
         with: { }
 
@@ -45,8 +47,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run custom lint-and-test action
+      - name: Package
         uses: ./.github/actions/package
         with:
-          user: ${{github.actor}}
-          token: ${{secrets.TOKEN}}
+          user: ${{ github.actor }}
+          token: ${{ secrets.TOKEN }}
