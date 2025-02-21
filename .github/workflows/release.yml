@@ -36,7 +36,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run lint and test
+      - name: Run custom lint-and-test action
         uses: ./.github/actions/lint-and-test
         with: { }
 
@@ -47,7 +47,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Package
+      - name: Run custom package action
         uses: ./.github/actions/package
         with:
           user: ${{ github.actor }}
