@@ -1,0 +1,15 @@
+{
+  "base_package": "com.patternpatrol",
+  "files": {
+    "level":"INFO",
+    "naming": "Contain"
+  },
+  "directories": {
+    "level":"ERROR",
+    "pattern": "FUNCTION",
+    "directories":{
+      "level":"ERROR",
+      "pattern": "LAYERED_ARCHITECTURE"
+    }
+  }
+}
