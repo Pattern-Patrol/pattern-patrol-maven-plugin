@@ -1,0 +1,44 @@
+name: Pacakge
+inputs:
+  token:
+    description: "Github token with package credentials"
+    required: true
+  user:
+    description: "Github user with package credentials"
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'corretto'
+        java-version: '17'
+        cache: 'maven'
+
+    - name: Configure Maven Settings
+      run: |
+        mkdir -p ~/.m2
+        cat > ~/.m2/settings.xml <<EOL
+        <settings>
+          <activeProfiles>
+            <activeProfile>github<activeProfile>
+          </activeProfiles>
+          <servers>
+            <server>
+              <id>github</id>
+              <username>${{ inputs.user }}</username>
+              <password>${{ inputs.token }}</password>
+            </server>
+          </servers>
+        </settings>
+      shell: bash
+
+    - name: Publish Package
+      run: mvn -B deploy release
+      shell: bash

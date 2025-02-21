@@ -1,0 +1,13 @@
+{
+  "basePackage": "com.patternpatrol",
+  "directoriesRule": {
+    "level": "ERROR",
+    "ignorePackages": ["rule", "constant"],
+    "fileRule": {
+      "level": "INFO",
+    },
+    "directoriesRule": {
+      "pattern": "IMPLEMENTATION"
+    }
+  }
+}
