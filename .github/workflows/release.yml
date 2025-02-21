@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    permissions:
+      contents: write  # for google-github-actions/release-please-action to create release commit
+      pull-requests: write  # for google-github-actions/release-please-action to create release PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - release-please:
+        runs-on: ubuntu-latest
+        uses: googleapis/release-please-action@v4
+        with:
+          command: manifest
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          default-branch: main
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      release_tag_name: ${{ steps.release.outputs.tag_name }}
+
+  lint_and_test:
+    needs: release-please
+    runs-on: ubuntu-latest
+    if: ${{ needs.release-please.outputs.release_created }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run custom lint-and-test action
+        uses: ./.github/actions/lint-and-test
+        with: { }
+
+  package:
+    needs: lint_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run custom lint-and-test action
+        uses: ./.github/actions/package
+        with: { }
