@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.5](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.4...v0.0.5) (2025-03-05)
+
+
+### Features
+
+* **rename-org:** Move all files to a better structure ([#19](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/19)) ([2c1ba5d](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/2c1ba5dd521df255b7f3c9b31462ff345a87611a))
+
+
+### Other
+
+* **main:** release 0.0.5-SNAPSHOT ([#18](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/18)) ([b628160](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/b628160ecd82749ecd03bfcc06aa0e40b1348b5a))
+
 ## [0.0.4](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.3...v0.0.4) (2025-02-21)
 
 
