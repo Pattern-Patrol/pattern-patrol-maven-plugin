@@ -62,4 +62,19 @@ public class PatternPatrolPluginTest {
         // Then
         assertThrows(MojoFailureException.class, () -> mojo.execute());
     }
+
+    @Test
+    public void testShouldFailDueToNoPatternPatrolFile() throws Exception {
+        // Given
+        File pom = new File("src/test/resources/pom_no_file.xml");
+        assertNotNull(pom);
+        assertTrue(pom.exists());
+
+        // When
+        PatternPatrolPlugin mojo = (PatternPatrolPlugin) rule.lookupMojo("verify", pom);
+        assertNotNull(mojo);
+
+        // Then
+        assertThrows(MojoFailureException.class, () -> mojo.execute());
+    }
 }
