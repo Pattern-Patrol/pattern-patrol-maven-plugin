@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.4](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.3...v0.0.4) (2025-02-21)
+
+
+### Bug Fixes
+
+* **release-please:** Fix release please ([2618cf2](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/2618cf27195a46935cd695c7c033069ad94d460f))
+* **release-please:** Fix release please ([32bc446](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/32bc44614affbc81fdbf5f9d5208e3c5deeeff1d))
+* **release-please:** Fix release please ([#16](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/16)) ([9c4b569](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/9c4b5698cfbb3aa219217e8f7dae3e33cbc6385d))
+
+
+### Other
+
+* **main:** release 0.0.4-SNAPSHOT ([#15](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/15)) ([5d38fb4](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/5d38fb4653b38e554b2102972455100c5fab30ba))
+
 ## [0.0.3](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.2...v0.0.3) (2025-02-21)
 
 
