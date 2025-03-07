@@ -56,6 +56,7 @@
           "type": "string",
           "enum": [
             "LAYERED",
+            "HEXAGONAL",
             "DOMAIN_DRIVEN",
             "IMPLEMENTATION",
             "ENDS_WITH",

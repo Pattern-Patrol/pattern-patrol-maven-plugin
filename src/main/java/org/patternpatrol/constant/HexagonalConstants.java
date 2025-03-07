@@ -6,14 +6,14 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public final class LayeredConstants {
+public final class HexagonalConstants {
 
-    private LayeredConstants() {
+    private HexagonalConstants() {
     }
 
     private static final Set<String> ALLOWED_MODULE_NAMES =
             Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
-
+                    ""
             )));
 
     public static Set<String> getPackageNames() {

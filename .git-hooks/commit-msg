@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the current branch name
+branch_name=$(git symbolic-ref --short HEAD)
+
+# Read the commit message
+commit_message=$(cat "$1")
+
+# Check if the commit message starts with the branch name
+if [[ ! "$commit_message" =~ ^"$branch_name" ]]; then
+    echo "❌ Commit message must start with the branch name: $branch_name"
+    exit 1
+fi
+
+# If it passes, allow the commit
+exit 0

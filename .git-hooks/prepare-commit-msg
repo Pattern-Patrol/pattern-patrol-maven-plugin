@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Get the branch name
+branch_name=$(git symbolic-ref --short HEAD)
+
+# Get the commit message file and commit type
+commit_msg_file="$1"
+commit_source="$2"
+
+# Skip for merge commits
+if [[ "$commit_source" == "merge" ]]; then
+    exit 0
+fi
+
+# Read the commit message
+commit_msg=$(cat "$commit_msg_file")
+
+# Extract the prefix (e.g., feat, ci) and issue number (e.g., #1, #5)
+if [[ "$branch_name" =~ ^([a-zA-Z]+)\/(#?[0-9]+)$ ]]; then
+    prefix="${BASH_REMATCH[1]}"
+    issue_number="${BASH_REMATCH[2]}"
+
+    # Ensure the commit message starts with "prefix(#issue_number): "
+    if [[ ! "$commit_msg" =~ ^$prefix\(\$issue_number\): ]]; then
+        echo "$prefix($issue_number): $commit_msg" > "$commit_msg_file"
+    fi
+fi
