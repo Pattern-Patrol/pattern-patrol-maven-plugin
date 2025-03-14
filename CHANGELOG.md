@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.7](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.6...v0.0.7) (2025-03-14)
+
+
+### Features
+
+* **#1:** Deploy to maven from pipeline ([#27](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/27)) ([81467e2](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/81467e2db074194f8ff917a7439ed5f3688b70bd))
+
+
+### Other
+
+* **main:** release 0.0.7-SNAPSHOT ([#26](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/26)) ([d446e78](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/d446e782ff5c6cc645e563a7ad4f7fa3136b45e0))
+
 ## [0.0.6](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.5...v0.0.6) (2025-03-14)
 
 
