@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.6](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.5...v0.0.6) (2025-03-14)
+
+
+### Features
+
+* **#3:** Checks for hexagonal infrastructure ([#23](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/23)) ([bc1666f](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/bc1666fed42761684ee12c3b9d8d43a5019e34ec))
+* **no-file-error:** Add test for no file ([#22](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/22)) ([38dff0f](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/38dff0fc8c8078b77abacefd0637feb2407d86d9))
+
+
+### Other
+
+* **main:** release 0.0.6-SNAPSHOT ([#21](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/21)) ([39d0f11](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/39d0f11fe378536d23724ceace78a319186b3cdb))
+
 ## [0.0.5](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.4...v0.0.5) (2025-03-05)
 
 
