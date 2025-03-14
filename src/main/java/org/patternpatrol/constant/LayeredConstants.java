@@ -13,7 +13,19 @@ public final class LayeredConstants {
 
     private static final Set<String> ALLOWED_MODULE_NAMES =
             Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
-
+                    "service",
+                    "controller",
+                    "model",
+                    "repository",
+                    "helper",
+                    "util",
+                    "exception",
+                    "enums",
+                    "dto",
+                    "dao",
+                    "middleware",
+                    "property",
+                    "utility"
             )));
 
     public static Set<String> getPackageNames() {

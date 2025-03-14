@@ -15,6 +15,7 @@ public class TextCheckHelper {
     private String text;
     private LogLevel logLevel;
     private Set<String> ignore;
+    private String ruleType;
 
     public CheckResult startsWith() {
         if (ignore != null && ignore.contains(this.text)) {
@@ -72,8 +73,8 @@ public class TextCheckHelper {
 
         // Check if the module name is allowed
         if (!this.args.contains(this.text)) {
-            String errorMessage = String.format("Package '%s' is not allowed in the layered architecture. Allowed modules: %s",
-                    this.text, this.args);
+            String errorMessage = String.format("Package '%s' is not allowed in the %s architecture. Allowed modules: %s",
+                    this.text, this.ruleType.toLowerCase(), this.args);
             return new CheckResult(false, this.text, this.logLevel, errorMessage);
         }
         return new CheckResult(true, this.text, this.logLevel, "Package " + this.text + " follows correct directory pattern");

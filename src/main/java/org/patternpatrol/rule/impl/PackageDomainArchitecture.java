@@ -8,7 +8,7 @@ import org.patternpatrol.rule.DirectoryPatternRule;
 public class PackageDomainArchitecture implements DirectoryPatternRule {
 
     @Override
-    public CheckResult check(final DirectoryRule directoryRule, final String targetPath) {
+    public CheckResult check(final DirectoryRule directoryRule, final String targetPath, final String fullPath) {
         return null; //new CheckResult();
     }
 }

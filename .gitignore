@@ -10,11 +10,21 @@
 *.war
 *.ear
 
-# Java dependency management files
-*.iml
-*.jar
-*.war
-*.ear
+### Build System ###
+# Maven
+target/
+target/**
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+
+# Gradle
+.gradle/
+build/
+gradle.properties
+gradlew
+gradlew.bat
 
 ### Eclipse ###
 # Eclipse project settings
@@ -32,14 +42,6 @@
 *.cproject
 *.settings/
 
-# Maven
-target/
-.idea/
-
-# Gradle
-.gradle/
-build/
-
 ### IntelliJ IDEA ###
 # IntelliJ IDEA project files
 .idea/
@@ -56,3 +58,11 @@ build/
 
 # IntelliJ specific directory
 .idea/**
+
+### OS-Specific ###
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini

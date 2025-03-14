@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.patternpatrol</groupId>
-    <artifactId>pattern-patrol-plugin</artifactId>
+    <artifactId>pattern-patrol-maven-plugin</artifactId>
     <version>0.0.5</version>
     <packaging>maven-plugin</packaging>
 

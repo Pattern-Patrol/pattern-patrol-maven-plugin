@@ -1,6 +1,8 @@
 package org.patternpatrol.util;
 
 import org.patternpatrol.model.Config;
+import org.patternpatrol.model.FileAndPath;
+import org.patternpatrol.model.FileAndPathList;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
@@ -21,15 +23,18 @@ public final class FileUtils {
     private FileUtils() {
     }
 
-    public static List<String> getAllPackagesAtBase(final Config config) throws IOException {
+    public static FileAndPathList<String, String> getAllPackagesAtBase(final Config config) throws IOException {
         String base = config.getBasePackage().replace(PACKAGE_DIVISOR_REGEX, DIRECTORY_DIVISOR_REGEX);
         Path currentRelativePath = Paths.get("");
         String s = currentRelativePath.toAbsolutePath().toString();
         String searchBasePath = s + "/src/main/java/" + base;
         List<String> allPaths = getAllPaths(searchBasePath);
         return allPaths.stream()
-                .map(path -> path.replace(searchBasePath + "/", ""))
-                .collect(Collectors.toList());
+                .map(path ->
+                        new FileAndPath<String, String>(
+                                path.replace(searchBasePath + "/", ""),
+                                path.replace(searchBasePath + "/", ""))
+                ).collect(Collectors.toCollection(FileAndPathList::new));
     }
 
     public static List<String> getAllPaths(final String basePackage) throws IOException {

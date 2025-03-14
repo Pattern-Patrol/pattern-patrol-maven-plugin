@@ -10,7 +10,7 @@ import org.patternpatrol.rule.FileNamingStandardRule;
 public class FileEndsWithLayered implements FileNamingStandardRule {
 
     @Override
-    public CheckResult check(final FileRule fileRule, final String targetPath) {
+    public CheckResult check(final FileRule fileRule, final String targetPath, final String fullPath) {
         TextCheckHelper textCheckHelper = new TextCheckHelper();
         textCheckHelper.setText(targetPath);
         textCheckHelper.setArgs(LayeredConstants.getFileNames());
