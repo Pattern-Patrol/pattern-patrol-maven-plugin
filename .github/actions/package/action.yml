@@ -53,9 +53,9 @@ runs:
       shell: bash
 
     - name: Publish to GitHub Packages
-      run: mvn -B deploy -DrepositoryId=github
+      run: mvn -B deploy -P github
       shell: bash
 
     - name: Publish to Maven Central
-      run: mvn -B deploy -P release
+      run: mvn -B deploy
       shell: bash
