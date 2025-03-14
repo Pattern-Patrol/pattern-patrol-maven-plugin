@@ -1,10 +1,16 @@
-name: Pacakge
+name: Package
 inputs:
-  token:
-    description: "Github token with package credentials"
+  github_token:
+    description: "GitHub token with package credentials"
     required: true
-  user:
-    description: "Github user with package credentials"
+  github_user:
+    description: "GitHub user with package credentials"
+    required: true
+  mvn_central_user:
+    description: "Maven Central username"
+    required: true
+  mvn_central_password:
+    description: "Maven Central password"
     required: true
 
 runs:
@@ -14,7 +20,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Setup java
+    - name: Setup Java
       uses: actions/setup-java@v4
       with:
         distribution: 'corretto'
@@ -27,18 +33,29 @@ runs:
         cat > ~/.m2/settings.xml <<EOL
         <settings>
           <activeProfiles>
-            <activeProfile>github<activeProfile>
+            <activeProfile>github</activeProfile>
+            <activeProfile>maven-central</activeProfile>
           </activeProfiles>
           <servers>
             <server>
               <id>github</id>
-              <username>${{ inputs.user }}</username>
-              <password>${{ inputs.token }}</password>
+              <username>${{ inputs.github_user }}</username>
+              <password>${{ inputs.github_token }}</password>
+            </server>
+            <server>
+              <id>ossrh</id>
+              <username>${{ inputs.maven_user }}</username>
+              <password>${{ inputs.maven_password }}</password>
             </server>
           </servers>
         </settings>
+        EOL
       shell: bash
 
-    - name: Publish Package
-      run: mvn -B deploy release
+    - name: Publish to GitHub Packages
+      run: mvn -B deploy -DrepositoryId=github
+      shell: bash
+
+    - name: Publish to Maven Central
+      run: mvn -B deploy -P release
       shell: bash

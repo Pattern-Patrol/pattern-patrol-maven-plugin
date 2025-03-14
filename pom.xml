@@ -13,16 +13,31 @@
     </properties>
 
     <distributionManagement>
+        <!-- GitHub Packages Deployment -->
         <repository>
             <id>github</id>
             <name>GitHub OWNER Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/pattern-patrol/pattern-patrol</url>
         </repository>
+
+        <!-- Maven Central Deployment -->
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <profiles>
+        <!-- GitHub Packages Profile -->
         <profile>
             <id>github</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
             <repositories>
                 <repository>
                     <id>central</id>
@@ -33,6 +48,27 @@
                     <url>https://maven.pkg.github.com/pattern-patrol/pattern-patrol</url>
                     <snapshots>
                         <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+
+        <!-- Maven Central Profile -->
+        <profile>
+            <id>release</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
                     </snapshots>
                 </repository>
             </repositories>
