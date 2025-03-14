@@ -50,5 +50,7 @@ jobs:
       - name: Run custom package action
         uses: ./.github/actions/package
         with:
-          user: ${{ github.actor }}
-          token: ${{ secrets.TOKEN }}
+          github_user: ${{ github.actor }}
+          github_token: ${{ secrets.TOKEN }}
+          mvn_central_user: ${{ secrets.MVN_CENTRAL_USER }}
+          mvn_central_password: ${{ secrets.MVN_CENTRAL_PASSWORD }}
