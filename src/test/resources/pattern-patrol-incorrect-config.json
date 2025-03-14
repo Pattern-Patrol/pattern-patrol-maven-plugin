@@ -1,5 +1,5 @@
 {
-  "basePackage": "com.patternpatrol",
+  "basePackage": "org.patternpatrol",
   "directoriesRule": {
     "level": "ERROR",
     "ignorePackages": ["rule", "constant"],

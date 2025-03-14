@@ -11,7 +11,7 @@ import java.util.Set;
 public class PackageLayeredArchitecture implements DirectoryPatternRule {
 
     @Override
-    public CheckResult check(final DirectoryRule directoryRule, final String targetPath) {
+    public CheckResult check(final DirectoryRule directoryRule, final String targetPath, final String fullPath) {
         // Create list of allowed module names from defaults and args
         Set<String> allowedModuleNames = LayeredConstants.getPackageNames();
         if (directoryRule.getPatternArgs() != null) {
@@ -26,6 +26,7 @@ public class PackageLayeredArchitecture implements DirectoryPatternRule {
         textCheckHelper.setArgs(allowedModuleNames);
         textCheckHelper.setIgnore(directoryRule.getIgnorePackages());
         textCheckHelper.setLogLevel(directoryRule.getLevel());
+        textCheckHelper.setRuleType(directoryRule.getPattern().name());
         return textCheckHelper.contains();
     }
 }

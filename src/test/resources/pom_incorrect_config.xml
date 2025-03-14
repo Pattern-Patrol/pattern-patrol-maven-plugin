@@ -15,7 +15,7 @@
         <plugins>
             <plugin>
                 <groupId>com.patternpatrol</groupId>
-                <artifactId>pattern-patrol-plugin</artifactId>
+                <artifactId>pattern-patrol-maven-plugin</artifactId>
                 <version>1.0-SNAPSHOT</version>
                 <configuration>
                     <configFile>src/test/resources/pattern-patrol-incorrect-config.json</configFile>

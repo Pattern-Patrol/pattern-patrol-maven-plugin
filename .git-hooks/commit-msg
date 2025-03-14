@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Get the current branch name
+branch_name=$(git symbolic-ref --short HEAD)
+
+# Read the commit message
+commit_message=$(cat "$1")
+
+# Extract the prefix (e.g., feat, ci) and issue number (e.g., #1, #5)
+if [[ "$branch_name" =~ ^([a-zA-Z]+)/#([0-9]+)$ ]]; then
+    prefix="${BASH_REMATCH[1]}"
+    issue_number="${BASH_REMATCH[2]}"
+
+    # Define the expected format
+    expected_prefix="$prefix(#$issue_number):"
+    expected_prefix_escaped=$(echo "$expected_prefix" | sed 's/(/\\(/g; s/)/\\)/g')
+    echo $expected_prefix
+    echo expected_prefix_escaped
+    echo $commit_message
+    # Check if the commit message starts with the expected format
+    if [[ ! "$commit_message" =~ ^$expected_prefix_escaped ]]; then
+        echo "❌ Commit message must start with: '$expected_prefix'"
+        exit 1
+    fi
+fi
+
+# If it passes, allow the commit
+exit 0

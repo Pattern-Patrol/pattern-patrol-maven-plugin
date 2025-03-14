@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.patternpatrol</groupId>
-    <artifactId>pattern-patrol-plugin</artifactId>
+    <artifactId>pattern-patrol-maven-plugin</artifactId>
     <version>0.0.5</version>
     <packaging>maven-plugin</packaging>
 
@@ -164,6 +164,26 @@
                         <goals>
                             <goal>descriptor</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>install-git-hooks</id>
+                        <phase>initialize</phase>  <!-- Runs before build starts -->
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>bash</executable>
+                            <arguments>
+                                <argument>${project.basedir}/install-hooks.sh</argument>
+                            </arguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

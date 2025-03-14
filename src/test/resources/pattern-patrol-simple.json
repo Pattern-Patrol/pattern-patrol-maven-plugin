@@ -1,5 +1,5 @@
 {
-  "basePackage": "com.patternpatrol",
+  "basePackage": "org.patternpatrol",
   "fileRule": {
     "level": "INFO",
     "naming": "ENDS_WITH",
