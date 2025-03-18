@@ -32,10 +32,6 @@ runs:
         mkdir -p ~/.m2
         cat > ~/.m2/settings.xml <<EOL
         <settings>
-          <activeProfiles>
-            <activeProfile>github</activeProfile>
-            <activeProfile>maven-central</activeProfile>
-          </activeProfiles>
           <servers>
             <server>
               <id>github</id>
@@ -44,8 +40,8 @@ runs:
             </server>
             <server>
               <id>ossrh</id>
-              <username>${{ inputs.maven_user }}</username>
-              <password>${{ inputs.maven_password }}</password>
+              <username>${{ inputs.mvn_central_user }}</username>
+              <password>${{ inputs.mvn_central_password }}</password>
             </server>
           </servers>
         </settings>
@@ -57,5 +53,5 @@ runs:
       shell: bash
 
     - name: Publish to Maven Central
-      run: mvn -B deploy
+      run: mvn -B deploy -P maven-central
       shell: bash
