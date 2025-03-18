@@ -12,30 +12,28 @@
         <checkstyle-plugin.version>3.6.0</checkstyle-plugin.version>
     </properties>
 
-    <distributionManagement>
-        <!-- Default deployment to Maven Central -->
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
     <profiles>
-        <!-- GitHub Packages Deployment Profile -->
         <profile>
             <id>github</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
             <distributionManagement>
                 <repository>
                     <id>github</id>
                     <url>https://maven.pkg.github.com/pattern-patrol/pattern-patrol-maven-plugin</url>
                 </repository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>maven-central</id>
+            <distributionManagement>
+                <repository>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
             </distributionManagement>
         </profile>
     </profiles>
