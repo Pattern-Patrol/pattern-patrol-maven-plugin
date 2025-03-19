@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.10](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.9...v0.0.10) (2025-03-19)
+
+
+### Features
+
+* **#1:** Add GPG signing ([#36](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/36)) ([ac6b126](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/ac6b126245b13b858afacecdbbc25075ff6762e2))
+
+
+### Other
+
+* **main:** release 0.0.10-SNAPSHOT ([#35](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/35)) ([dfc3a57](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/dfc3a5762cbd36a16faa61e215669166909d3a34))
+
 ## [0.0.9](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.8...v0.0.9) (2025-03-18)
 
 
