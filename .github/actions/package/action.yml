@@ -65,10 +65,10 @@ runs:
         cat <(echo -e "${{ inputs.gpg_secret_key }}") | gpg --batch --import
         # Verify gpg secret key
         gpg --list-secret-keys --keyid-format LONG
+      shell: bash
 
     - id: publish-to-central
       name: Publish to Central Repository
-      shell: bash
       run: |
         mvn \
           --no-transfer-progress \
@@ -76,3 +76,4 @@ runs:
           -Dgpg.passphrase=${{ inputs.gpg_signing_key_password }} \
           clean deploy
           -P maven-central
+      shell: bash
