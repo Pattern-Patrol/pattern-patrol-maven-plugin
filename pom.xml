@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.patternpatrol</groupId>
     <artifactId>pattern-patrol-maven-plugin</artifactId>
-    <version>0.0.10</version>
+    <version>0.0.11-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <properties>
