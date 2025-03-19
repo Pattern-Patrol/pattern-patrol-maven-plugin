@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.0.9](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.8...v0.0.9) (2025-03-18)
+
+
+### Features
+
+* **#1:** Fix pom and release pipelines ([#33](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/33)) ([84e1484](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/84e148498e82113b61440d97675d18ec373c010c))
+
+
+### Other
+
+* **main:** release 0.0.9-SNAPSHOT ([#32](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/32)) ([b718c5e](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/b718c5efd1bb89e9ba1b591cae92a785ce640610))
+
+## [0.0.8](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.7...v0.0.8) (2025-03-14)
+
+
+### Features
+
+* **#1:** Fix pom for pipeline ([#30](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/30)) ([4d44d58](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/4d44d58c4d080ba259967443b75d246753f6c4f8))
+
+
+### Other
+
+* **main:** release 0.0.8-SNAPSHOT ([#29](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/29)) ([d08c75f](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/d08c75fbf35103b63f1b479a002bb9cff1efa809))
+
 ## [0.0.7](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.6...v0.0.7) (2025-03-14)
 
 
