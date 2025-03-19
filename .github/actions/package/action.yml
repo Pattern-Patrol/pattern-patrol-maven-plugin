@@ -12,6 +12,12 @@ inputs:
   mvn_central_password:
     description: "Maven Central password"
     required: true
+  gpg_secret_key:
+    description: "GPG signing key"
+    required: true
+  gpg_signing_key_password:
+    description: "GPG signing key password"
+    required: true
 
 runs:
   using: composite
@@ -52,6 +58,21 @@ runs:
       run: mvn -B deploy -P github
       shell: bash
 
-    - name: Publish to Maven Central
-      run: mvn -B deploy -P maven-central
+    - id: install-secret-key
+      name: Install gpg secret key
+      run: |
+        # Install gpg secret key
+        cat <(echo -e "${{ inputs.gpg_secret_key }}") | gpg --batch --import
+        # Verify gpg secret key
+        gpg --list-secret-keys --keyid-format LONG
+
+    - id: publish-to-central
+      name: Publish to Central Repository
       shell: bash
+      run: |
+        mvn \
+          --no-transfer-progress \
+          --batch-mode \
+          -Dgpg.passphrase=${{ inputs.gpg_signing_key_password }} \
+          clean deploy
+          -P maven-central
