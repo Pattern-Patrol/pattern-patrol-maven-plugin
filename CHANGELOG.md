@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.12](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.11...v0.0.12) (2025-03-20)
+
+
+### Features
+
+* **#1:** Only sign maven central deploy ([#42](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/42)) ([e10ad94](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/e10ad94a639f6b4e7f6332c7f5d647ebca3e8c85))
+
+
+### Other
+
+* **main:** release 0.0.12-SNAPSHOT ([#41](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/41)) ([b4adc67](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/b4adc679b218b53f8bc62195ea83b1c2f143fedf))
+
 ## [0.0.11](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.10...v0.0.11) (2025-03-19)
 
 
