@@ -12,7 +12,7 @@ inputs:
   mvn_central_password:
     description: "Maven Central password"
     required: true
-  gpg_secret_key:
+  gpg_signing_key:
     description: "GPG signing key"
     required: true
   gpg_signing_key_password:
@@ -62,7 +62,7 @@ runs:
       name: Install gpg secret key
       run: |
         # Install gpg secret key
-        cat <(echo -e "${{ inputs.gpg_secret_key }}") | gpg --batch --import
+        cat <(echo -e "${{ inputs.gpg_signing_key }}") | gpg --batch --import
         # Verify gpg secret key
         gpg --list-secret-keys --keyid-format LONG
       shell: bash

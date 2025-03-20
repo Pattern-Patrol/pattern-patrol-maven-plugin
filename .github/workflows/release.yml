@@ -54,5 +54,5 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           mvn_central_user: ${{ secrets.MVN_CENTRAL_USER }}
           mvn_central_password: ${{ secrets.MVN_CENTRAL_PASSWORD }}
-          gpg_secret_key: ${{ secrets.GPG_SIGNING_KEY }}
+          gpg_signing_key: ${{ secrets.GPG_SIGNING_KEY }}
           gpg_signing_key_password: ${{ secrets.GPG_SIGNING_KEY_PASSWORD }}
