@@ -49,6 +49,10 @@ runs:
               <username>${{ inputs.mvn_central_user }}</username>
               <password>${{ inputs.mvn_central_password }}</password>
             </server>
+            <server>
+              <id>gpg.passphrase</id>
+              <password>${inputs.gpg_signing_key_password}</password>
+            </server>
           </servers>
         </settings>
         EOL
@@ -73,7 +77,7 @@ runs:
         mvn \
           --no-transfer-progress \
           --batch-mode \
-          -Dgpg.passphrase=${{ inputs.gpg_signing_key_password }} \
+          -P maven-central \
+          -Dgpg.passphrase=*** \
           clean deploy
-          -P maven-central
       shell: bash
