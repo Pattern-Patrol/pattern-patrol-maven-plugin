@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.14](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.13...v0.0.14) (2025-04-03)
+
+
+### Features
+
+* **#1:** Fix deploy pipeline and versions add new package functions ([#51](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/51)) ([850b521](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/850b5218278d5b71fb41d998e93cf99e9ca53999))
+
+
+### Other
+
+* **main:** release 0.0.14-SNAPSHOT ([#50](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/50)) ([f2e480a](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/f2e480ae96f0d0e8f0d10d8fb31046f042ee99f7))
+
 ## [0.0.13](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.12...v0.0.13) (2025-03-27)
 
 
