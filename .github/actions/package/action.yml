@@ -51,7 +51,7 @@ runs:
             </server>
             <server>
               <id>gpg.passphrase</id>
-              <password>${inputs.gpg_signing_key_password}</password>
+              <password>${{inputs.gpg_signing_key_password}}</password>
             </server>
           </servers>
         </settings>
