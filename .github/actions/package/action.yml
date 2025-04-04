@@ -58,7 +58,7 @@ runs:
         EOL
       shell: bash
 
-    - id: Print Settins
+    - id: print-settings
       name: Print all settings
       run: |
         cat ~/.m2/settings.xml
