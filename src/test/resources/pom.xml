@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.anyproject</groupId>
     <artifactId>test-plugin</artifactId>
-    <version>0.0.17</version>
+    <version>0.0.18-SNAPSHOT</version>
 
     <repositories>
         <repository>
