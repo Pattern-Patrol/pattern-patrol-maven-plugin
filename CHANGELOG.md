@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.16](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.15...v0.0.16) (2025-04-04)
+
+
+### Features
+
+* **#1:** Follow the maven central process for publishing ([#57](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/57)) ([cb60a52](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/cb60a52a3bc136488183eadf2bf0ba7aeb91cc95))
+
+
+### Other
+
+* **main:** release 0.0.16-SNAPSHOT ([#56](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/56)) ([b6080db](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/b6080db541ca08a82e8b36a761e428844364144e))
+
 ## [0.0.15](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.14...v0.0.15) (2025-04-03)
 
 
