@@ -58,6 +58,12 @@ runs:
         EOL
       shell: bash
 
+    - id: Print Settins
+      name: Print all settings
+      run: |
+        cat ~/.m2/settings.xml
+      shell: bash
+
     - id: install-secret-key
       name: Install gpg secret key
       run: |
