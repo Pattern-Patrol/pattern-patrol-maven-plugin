@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.18](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.17...v0.0.18) (2025-04-04)
+
+
+### Features
+
+* **#1:** Fix settings.xml ([#63](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/63)) ([1d7b327](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/1d7b327977442eb56f612c7bc35051c05f7c43f5))
+
+
+### Other
+
+* **main:** release 0.0.18-SNAPSHOT ([#62](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/issues/62)) ([245b141](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/commit/245b14125f09bd1bc0b6b5e6eb98a46b521f7bc7))
+
 ## [0.0.17](https://github.com/Pattern-Patrol/pattern-patrol-maven-plugin/compare/v0.0.16...v0.0.17) (2025-04-04)
 
 
