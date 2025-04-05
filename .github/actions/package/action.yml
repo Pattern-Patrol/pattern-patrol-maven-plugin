@@ -37,7 +37,9 @@ runs:
       run: |
         mkdir -p ~/.m2
         cat > ~/.m2/settings.xml <<EOL
-        <settings>
+        <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
           <servers>
             <server>
               <id>github</id>
@@ -62,6 +64,12 @@ runs:
       name: Print all settings
       run: |
         cat ~/.m2/settings.xml
+      shell: bash
+
+    - id: check-settings
+      name: Check all settings
+      run: |
+        mvn help:effective-settings -s ~/.m2/settings.xml
       shell: bash
 
     - id: install-secret-key
